@@ -38,7 +38,7 @@ function createBoard(){
         cell.dataset.index = i; // asegna ogni cella un indice
         board.appendChild(cell); // nel tavola aggiunge una cella
         cells.push(cell); // nel vettore aggiunge la cella
-        cell.addEventListener('click', checkClick); // quando clicca su cella
+        cell.addEventListener('click', checkClick,{ once:true }); // quando clicca su cella uno alla volta
     }
 }
 
